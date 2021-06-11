@@ -13,15 +13,22 @@ import logger from 'redux-logger';
 
 
 //#region ⬇⬇ All reducers below: 
-
-//#endregion ⬆⬆ All reducers above. 
+const fakeReducer = (state = [], action) => {
+  switch (action.type) {
+    case 'ADD_TO_CART':
+      return [...state, action.payload];
+    default:
+      return state;
+  } // End switch
+} // End shoppingCart reducer
+  //#endregion ⬆⬆ All reducers above. 
 
 
 //#region ⬇⬇ Store & render below: 
 // ⬇ Store: 
 const store = createStore(
   combineReducers({
-
+    fakeReducer
   }), applyMiddleware(
     logger
   )
@@ -34,4 +41,4 @@ ReactDOM.render(
   </Provider>
   , document.getElementById('root'));
 registerServiceWorker();
-//#endregion ⬆⬆ Store * render above.
+//#endregion ⬆⬆ Store & render above.
