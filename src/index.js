@@ -15,10 +15,10 @@ import logger from 'redux-logger';
 
 //#region ⬇⬇ All reducers below: 
 const feedbackReducer = (state = [], action) => {
-  console.log('In feedbackReducer, state:', state);
+  // console.log('In feedbackReducer, state:', state);
   switch (action.type) {
     case 'ADD_FEEDBACK':
-      console.log('In ADD_FEEDBACK, payload:', action.payload);
+      // console.log('In ADD_FEEDBACK, payload:', action.payload);
       return [...state, action.payload];
     default:
       return state;
