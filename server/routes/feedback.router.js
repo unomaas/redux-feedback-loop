@@ -37,7 +37,7 @@ router.get('/', (req, res) => {
   // ⬇ Declaring the SQL commands:
   const sqlText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments") VALUES ($1, $2, $3, $4);`;
   // ⬇ Sanitizing values, which need to be sent as an array:
-  const values = [newFeedback.feeling, newFeedback.understanding, newFeedback.support, newFeedback.comments]
+  const values = [newFeedback[0], newFeedback[1], newFeedback[2], newFeedback[3]]
   // ⬇ Sending query to DB:
   pool.query(sqlText, values)
     .then(result => {

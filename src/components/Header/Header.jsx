@@ -6,7 +6,7 @@ export default function Header() {
     <div>
       <header className='header'>
         <h1 className='header-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
+        <h4 className='header-subtitle'>Don't forget it!</h4>
       </header>
     </div>
   )

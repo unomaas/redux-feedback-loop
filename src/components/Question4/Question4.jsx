@@ -5,8 +5,9 @@ import './Question4.css';
 import { useDispatch } from 'react-redux';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { Button, MenuItem, TextField } from '@material-ui/core';
+import { Button, TextField } from '@material-ui/core';
 //#endregion ⬆⬆ Document setup above. 
+
 
 export default function Question4() {
   //#region ⬇⬇ State variables below:
@@ -18,14 +19,14 @@ export default function Question4() {
 
   //#region ⬇⬇ Event handlers below:
   const handleSubmit = () => {
-    console.log('In Question4 handleSubmit, understanding:', feedback);
+    console.log('In Question4 handleSubmit, comment:', feedback);
     // ⬇ Sending user input to the reducer:
     dispatch({
       type: 'ADD_FEEDBACK',
       payload: feedback
     }); // End dispatch
     // ⬇ Sending user to next page: 
-    history.push('/question4');
+    history.push('/review');
   } // End handleSubmit
   //#endregion ⬆⬆ Event handles above. 
 
@@ -33,22 +34,16 @@ export default function Question4() {
   // ⬇ Rendering:
   return (
     <div className="question-wrapper">
-      <h2>How well are you being supported??</h2>
+      <h2>Any comments you want to leave?</h2>
 
       <div className="question-form">
         <form onSubmit={handleSubmit}>
           <TextField
             required
-            select
             defaultValue=""
             onChange={event => setFeedback(event.target.value)}
             helperText="Required"
           >
-            <MenuItem value='1'>1</MenuItem>
-            <MenuItem value='2'>2</MenuItem>
-            <MenuItem value='3'>3</MenuItem>
-            <MenuItem value='4'>4</MenuItem>
-            <MenuItem value='5'>5</MenuItem>
           </TextField>
           <Button type="submit">
             Next

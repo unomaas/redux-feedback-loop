@@ -14,12 +14,12 @@ import logger from 'redux-logger';
 
 
 //#region ⬇⬇ All reducers below: 
-const feedbackReducer = (state = [], action) => {
-  // console.log('In feedbackReducer, state:', state);
+const feedbackArray = (state = [], action) => {
   switch (action.type) {
     case 'ADD_FEEDBACK':
-      // console.log('In ADD_FEEDBACK, payload:', action.payload);
       return [...state, action.payload];
+    case 'EMPTY_FEEDBACK':
+      return [];
     default:
       return state;
   } // End switch
@@ -31,7 +31,7 @@ const feedbackReducer = (state = [], action) => {
 // ⬇ Store: 
 const store = createStore(
   combineReducers({
-    feedbackReducer
+    feedbackArray
   }), applyMiddleware(
     logger
   )

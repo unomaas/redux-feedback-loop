@@ -18,7 +18,7 @@ export default function Question3() {
 
   //#region ⬇⬇ Event handlers below:
   const handleSubmit = () => {
-    console.log('In Question3 handleSubmit, understanding:', feedback);
+    console.log('In Question3 handleSubmit, supported:', feedback);
     // ⬇ Sending user input to the reducer:
     dispatch({
       type: 'ADD_FEEDBACK',
@@ -33,7 +33,7 @@ export default function Question3() {
   // ⬇ Rendering:
   return (
     <div className="question-wrapper">
-      <h2>How well are you being supported??</h2>
+      <h2>How well are you being supported?</h2>
 
       <div className="question-form">
         <form onSubmit={handleSubmit}>
