@@ -13,17 +13,17 @@ export default function Question1() {
   //#region ⬇⬇ State variables below:
   const dispatch = useDispatch();
   const history = useHistory();
-  const [feeling, setFeeling] = useState('');
+  const [feedback, setFeedback] = useState('');
   //#endregion ⬆⬆ State variables above. 
 
 
   //#region ⬇⬇ Event handlers below:
   const handleSubmit = () => {
-    console.log('In Question1 handleSubmit, feeling:', feeling);
+    console.log('In Question1 handleSubmit, feeling:', feedback);
     // ⬇ Sending user input to the reducer:
     dispatch({
       type: 'ADD_FEEDBACK',
-      payload: feeling
+      payload: feedback
     }); // End dispatch
     // ⬇ Sending user to next page: 
     history.push('/question2');
@@ -42,7 +42,7 @@ export default function Question1() {
             required
             select
             defaultValue=""
-            onChange={event => setFeeling(event.target.value)}
+            onChange={event => setFeedback(event.target.value)}
             helperText="Required"
           >
             <MenuItem value='1'>1</MenuItem>

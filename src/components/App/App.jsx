@@ -28,23 +28,23 @@ export default function App() {
             <Question1 />
           </Route>
 
-          <Route path='question2'>
+          <Route path='/question2'>
             <Question2 />
           </Route>
 
-          <Route path='question3'>
+          <Route path='/question3'>
             <Question3 />
           </Route>
 
-          <Route path='question4'>
+          <Route path='/question4'>
             <Question4 />
           </Route>
 
-          <Route path='review'>
+          <Route path='/review'>
             <Review />
           </Route>
 
-          <Route path='thanks'>
+          <Route path='/thanks'>
             <Thanks />
           </Route>
         </main>
