@@ -18,6 +18,9 @@ export default function Question4() {
 
 
   //#region ⬇⬇ Event handlers below:
+  /** ⬇ handleSubmit:
+  * When clicked, this will send the feedback to the feedbackArray reducer and send the user to the next page. 
+  */
   const handleSubmit = () => {
     console.log('In Question4 handleSubmit, comment:', feedback);
     // ⬇ Sending user input to the reducer:
@@ -53,4 +56,4 @@ export default function Question4() {
 
     </div>
   ) // End return
-} // End Question3
+} // End Question4

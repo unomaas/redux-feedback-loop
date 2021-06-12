@@ -8,11 +8,9 @@ import Question3 from '../Question3/Question3';
 import Question4 from '../Question4/Question4';
 import Review from '../Review/Review';
 import Thanks from '../Thanks/Thanks';
-
 // ⬇ Dependent functionality:
 import React from 'react';
 import { Route, HashRouter as Router } from 'react-router-dom';
-import axios from 'axios';
 //#endregion ⬆⬆ Document setup above. 
 
 

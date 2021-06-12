@@ -8,6 +8,7 @@ import { useHistory } from 'react-router-dom';
 import { Button, MenuItem, TextField } from '@material-ui/core';
 //#endregion ⬆⬆ Document setup above. 
 
+
 export default function Question2() {
   //#region ⬇⬇ State variables below:
   const dispatch = useDispatch();
@@ -17,6 +18,9 @@ export default function Question2() {
 
 
   //#region ⬇⬇ Event handlers below:
+  /** ⬇ handleSubmit:
+  * When clicked, this will send the feedback to the feedbackArray reducer and send the user to the next page. 
+  */
   const handleSubmit = () => {
     console.log('In Question2 handleSubmit, understanding:', feedback);
     // ⬇ Sending user input to the reducer:

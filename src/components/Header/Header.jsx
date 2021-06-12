@@ -1,5 +1,8 @@
+//#region ⬇⬇ Document setup below: 
 import React from 'react'
 import './Header.css';
+//#endregion ⬆⬆ Document setup above. 
+
 
 export default function Header() {
   return (
@@ -9,5 +12,5 @@ export default function Header() {
         <h4 className='header-subtitle'>Don't forget it!</h4>
       </header>
     </div>
-  )
-}
+  ) // End return
+} // End Header
