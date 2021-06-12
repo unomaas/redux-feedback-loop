@@ -50,7 +50,9 @@ To run this program, you will need to:
 
 ### Accessibility: 
 
-I strive to make my apps accessible to all!  This specific app is dyslexia accessible, as I added a custom font, "OpenDyslexia", to the server. 
+I strive to make my apps accessible to all!  
+
+This specific app is dyslexia-friendly, with a custom font, "OpenDyslexia", added to the server. 
 
 
 ### Built With

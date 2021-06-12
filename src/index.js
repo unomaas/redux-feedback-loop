@@ -3,7 +3,15 @@
 import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
-
+// ⬇ Font setup:
+import './fonts/OpenDyslexia/opendyslexic-regular-webfont.woff'
+import './fonts/OpenDyslexia/opendyslexic-regular-webfont.woff2'
+import './fonts/OpenDyslexia/opendyslexic-bold-webfont.woff'
+import './fonts/OpenDyslexia/opendyslexic-bold-webfont.woff2'
+import './fonts/OpenDyslexia/opendyslexic-italic-webfont.woff'
+import './fonts/OpenDyslexia/opendyslexic-italic-webfont.woff2'
+import './fonts/OpenDyslexia/opendyslexic-bolditalic-webfont.woff'
+import './fonts/OpenDyslexia/opendyslexic-bolditalic-webfont.woff2'
 // ⬇ React/Redux functionality:
 import React from 'react';
 import ReactDOM from 'react-dom';
