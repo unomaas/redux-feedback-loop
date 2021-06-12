@@ -6,8 +6,8 @@ const pool = require('../modules/pool');
 
 
 //#region ⬇⬇ All CRUD routes below:
-/** ⬇ /feedback GET:
- * Router function to handle the GET part of the server-side logic.  Will send SQL query to pull all of the tasks from the DB to update on the DOM.
+/** ⬇ GET /feedback:
+ * Router function to handle the GET part of the server-side logic.  Will send SQL query to pull all of the entries from the DB to update on the DOM.
  */
 router.get('/', (req, res) => {
   console.log('In GET /feedback');
@@ -26,8 +26,8 @@ router.get('/', (req, res) => {
     }); // End .catch
 }) // End GET /feedback
 
-/** ⬇ /treats POST functionality:
- * Router function to handle the POST part of the server-side logic.  Will send SQL query to add new treats to the DB and output to DOM. 
+/** ⬇ POST /feedback:
+ * Router function to handle the POST part of the server-side logic.  Will send SQL query to add new entries to the DB.
  */
  router.post('/', (req, res) => {
   console.log('In POST /feedback');

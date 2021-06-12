@@ -3,6 +3,7 @@
 import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
+
 // ⬇ React/Redux functionality:
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -13,26 +14,28 @@ import logger from 'redux-logger';
 
 
 //#region ⬇⬇ All reducers below: 
-const fakeReducer = (state = [], action) => {
+const feedbackReducer = (state = [], action) => {
+  console.log('In feedbackReducer, state:', state);
   switch (action.type) {
-    case 'ADD_TO_CART':
+    case 'ADD_FEEDBACK':
+      console.log('In ADD_FEEDBACK, payload:', action.payload);
       return [...state, action.payload];
     default:
       return state;
   } // End switch
-} // End shoppingCart reducer
-  //#endregion ⬆⬆ All reducers above. 
+} // End feedbackReducer reducer
+//#endregion ⬆⬆ All reducers above. 
 
 
 //#region ⬇⬇ Store & render below: 
 // ⬇ Store: 
 const store = createStore(
   combineReducers({
-    fakeReducer
+    feedbackReducer
   }), applyMiddleware(
     logger
   )
-);
+); // End store
 
 // ⬇ Render:
 ReactDOM.render(
@@ -40,5 +43,5 @@ ReactDOM.render(
     <App />
   </Provider>
   , document.getElementById('root'));
-registerServiceWorker();
+registerServiceWorker(); // End render.
 //#endregion ⬆⬆ Store & render above.
