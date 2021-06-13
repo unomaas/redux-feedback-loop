@@ -45,6 +45,13 @@ export default function Review() {
         console.log('In /feedback POST, response:', error);
       }); // End .catch
   } // End handleSubmit
+
+  /** ⬇ handleBack:
+    * When clicked, this will send the user to the previous page to change an answer. 
+    */
+  const handleBack = () => {
+    history.push('/question4');
+  } // End handleBack
   //#endregion ⬆⬆ Event handles above. 
 
 
@@ -60,13 +67,26 @@ export default function Review() {
         <p>Comments: {commentObject.comment}</p>
       </div>
 
+      <div>
+      <Button
+        onClick={handleBack}
+        variant="outlined"
+        color="secondary"
+      >
+        ⬅ Change Your Feedback
+      </Button>
+      &nbsp;
       <Button
         onClick={handleSubmit}
         variant="outlined"
         color="primary"
       >
-        Submit This Feedback
+        Submit This Feedback ✔
       </Button>
+      </div>
+
+      <br /><br />
+
 
     </div>
   ) // End return
