@@ -13,19 +13,29 @@ import axios from 'axios';
 export default function Review() {
   //#region ⬇⬇ State variables below:
   const history = useHistory();
-  // ⬇ Importing feedback from store:
-  const feedbackArray = useSelector(store => store.feedbackArray);
+  // ⬇ Importing all feedback from store:
+  const feelingObject = useSelector(store => store.feelingObject);
+  const understandingObject = useSelector(store => store.understandingObject);
+  const supportedObject = useSelector(store => store.supportedObject);
+  const commentObject = useSelector(store => store.commentObject);
+  // ⬇ Bundling all feedback into one object to send to DB:
+  const feedback = {
+    feeling: feelingObject.feeling,
+    understanding: understandingObject.understanding,
+    supported: supportedObject.supported,
+    comment: commentObject.comment
+  } // End feedback
   //#endregion ⬆⬆ State variables above. 
 
 
   //#region ⬇⬇ Event handlers below:
   /** ⬇ handleSubmit:
-  * When clicked, this will POST the feedback to the DB and send the user to the /thanks page. 
-  */
+    * When clicked, this will POST the feedback to the DB and send the user to the /thanks page. 
+    */
   const handleSubmit = () => {
-    console.log('In Review handleSubmit, feedback:', feedbackArray);
+    console.log('In Review handleSubmit, feedback:', feedback);
     // ⬇ Sending the feedback to the DB:
-    axios.post('/feedback', feedbackArray)
+    axios.post('/feedback', feedback)
       .then(response => {
         console.log('In /feedback POST, response:', response.data);
         // ⬇ Sending user to next page: 
@@ -44,10 +54,10 @@ export default function Review() {
       <h2>Review Your Feedback:</h2>
 
       <div className="review-text">
-        <p>Feeling: {feedbackArray[0]}</p>
-        <p>Understanding: {feedbackArray[1]}</p>
-        <p>Support: {feedbackArray[2]}</p>
-        <p>Comments: {feedbackArray[3]}</p>
+        <p>Feeling: {feelingObject.feeling}</p>
+        <p>Understanding: {understandingObject.understanding}</p>
+        <p>Supported: {supportedObject.supported}</p>
+        <p>Comments: {commentObject.comment}</p>
       </div>
 
       <Button

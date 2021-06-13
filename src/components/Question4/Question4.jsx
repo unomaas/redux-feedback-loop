@@ -13,19 +13,21 @@ export default function Question4() {
   //#region ⬇⬇ State variables below:
   const dispatch = useDispatch();
   const history = useHistory();
-  const [feedback, setFeedback] = useState();
+  const [comment, setComment] = useState();
   //#endregion ⬆⬆ State variables above. 
 
 
   //#region ⬇⬇ Event handlers below:
   /** ⬇ handleSubmit:
-  * When clicked, this will send the feedback to the feedbackArray reducer and send the user to the next page. 
-  */
+    * When clicked, this will send the feedback to the feedbackArray reducer and send the user to the next page. 
+    */
   const handleSubmit = () => {
-    console.log('In Question4 handleSubmit, comment:', feedback);
+    console.log('In Question4 handleSubmit, comment:', comment);
+    // ⬇ Bundling feedback into an object key:
+    const feedback = { comment: comment }
     // ⬇ Sending user input to the reducer:
     dispatch({
-      type: 'ADD_FEEDBACK',
+      type: 'ADD_COMMENT',
       payload: feedback
     }); // End dispatch
     // ⬇ Sending user to next page: 
@@ -44,7 +46,7 @@ export default function Question4() {
           <TextField
             required
             defaultValue=""
-            onChange={event => setFeedback(event.target.value)}
+            onChange={event => setComment(event.target.value)}
             helperText="Required"
           >
           </TextField>

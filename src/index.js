@@ -22,16 +22,53 @@ import logger from 'redux-logger';
 
 
 //#region ⬇⬇ All reducers below: 
-const feedbackArray = (state = [], action) => {
+// ⬇ feelingObject reducer:
+const feelingObject = (state = {}, action) => {
   switch (action.type) {
-    case 'ADD_FEEDBACK':
-      return [...state, action.payload];
+    case 'ADD_FEELING':
+      return action.payload;
     case 'EMPTY_FEEDBACK':
       return [];
     default:
       return state;
   } // End switch
-} // End feedbackReducer reducer
+} // End feelingObject reducer
+
+// ⬇ understandingObject reducer:
+const understandingObject = (state = {}, action) => {
+  switch (action.type) {
+    case 'ADD_UNDERSTANDING':
+      return action.payload;
+    case 'EMPTY_FEEDBACK':
+      return [];
+    default:
+      return state;
+  } // End switch
+} // End understandingObject reducer
+
+// ⬇ supportedObject reducer:
+const supportedObject = (state = {}, action) => {
+  switch (action.type) {
+    case 'ADD_SUPPORTED':
+      return action.payload;
+    case 'EMPTY_FEEDBACK':
+      return [];
+    default:
+      return state;
+  } // End switch
+} // End supportedObject reducer
+
+// ⬇ commentObject reducer:
+const commentObject = (state = {}, action) => {
+  switch (action.type) {
+    case 'ADD_COMMENT':
+      return action.payload;
+    case 'EMPTY_FEEDBACK':
+      return [];
+    default:
+      return state;
+  } // End switch
+} // End commentObject reducer
 //#endregion ⬆⬆ All reducers above. 
 
 
@@ -39,7 +76,7 @@ const feedbackArray = (state = [], action) => {
 // ⬇ Store: 
 const store = createStore(
   combineReducers({
-    feedbackArray
+    feelingObject, understandingObject, supportedObject, commentObject
   }), applyMiddleware(
     logger
   )
