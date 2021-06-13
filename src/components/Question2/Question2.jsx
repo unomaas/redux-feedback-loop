@@ -19,16 +19,15 @@ export default function Question2() {
 
   //#region ⬇⬇ Event handlers below:
   /** ⬇ handleSubmit:
-    * When clicked, this will send the feedback to the feedbackArray reducer and send the user to the next page. 
+    * When clicked, this will send the feedback to the reducer and send the user to the next page. 
     */
   const handleSubmit = () => {
     console.log('In Question2 handleSubmit, understanding:', understanding);
     // ⬇ Bundling feedback into an object key:
     const feedback = { understanding: understanding }
-    console.log(feedback);
     // ⬇ Sending user input to the reducer:
     dispatch({
-      type: 'ADD_FEEDBACK',
+      type: 'ADD_UNDERSTANDING',
       payload: feedback
     }); // End dispatch
     // ⬇ Sending user to next page: 

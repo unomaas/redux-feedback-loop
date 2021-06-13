@@ -25,14 +25,13 @@ export default function Question3() {
     console.log('In Question3 handleSubmit, supported:', supported);
     // ⬇ Bundling feedback into an object key:
     const feedback = { supported: supported }
-    console.log(feedback);
     // ⬇ Sending user input to the reducer:
     dispatch({
-      type: 'ADD_FEEDBACK',
+      type: 'ADD_SUPPORTED',
       payload: feedback
     }); // End dispatch
     // ⬇ Sending user to next page: 
-    // history.push('/question4');
+    history.push('/question4');
   } // End handleSubmit
   //#endregion ⬆⬆ Event handles above. 
 

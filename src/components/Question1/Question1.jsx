@@ -2,7 +2,7 @@
 // ⬇ File setup: 
 import './Question1.css';
 // ⬇ Dependent functionality:
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button, MenuItem, TextField } from '@material-ui/core';
@@ -14,26 +14,20 @@ export default function Question1() {
   const dispatch = useDispatch();
   const history = useHistory();
   const [feeling, setFeeling] = useState('');
-  const feedback = {
-    feeling: feeling
-  }
   //#endregion ⬆⬆ State variables above. 
-  const feedbackArray = useSelector(store => store.feedbackArray);
-
 
 
   //#region ⬇⬇ Event handlers below:
   /** ⬇ handleSubmit:
-    * When clicked, this will send the feedback to the feedbackArray reducer and send the user to the next page. 
+    * When clicked, this will send the feedback to the reducer and send the user to the next page. 
     */
   const handleSubmit = () => {
     console.log('In Question1 handleSubmit, feeling:', feeling);
     // ⬇ Bundling feedback into an object key:
-    const feedback = {feeling: feeling}
-    console.log(feedback);
+    const feedback = { feeling: feeling }
     // ⬇ Sending user input to the reducer:
     dispatch({
-      type: 'ADD_FEEDBACK',
+      type: 'ADD_FEELING',
       payload: feedback
     }); // End dispatch
     // ⬇ Sending user to next page: 
