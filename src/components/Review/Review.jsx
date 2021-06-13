@@ -7,6 +7,8 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 import axios from 'axios';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 //#endregion ⬆⬆ Document setup above. 
 
 
@@ -68,21 +70,21 @@ export default function Review() {
       </div>
 
       <div>
-      <Button
-        onClick={handleBack}
-        variant="outlined"
-        color="secondary"
-      >
-        ⬅ Change Your Feedback
-      </Button>
-      &nbsp;
-      <Button
-        onClick={handleSubmit}
-        variant="outlined"
-        color="primary"
-      >
-        Submit This Feedback ✔
-      </Button>
+        <Button
+          onClick={handleBack}
+          variant="outlined"
+          color="secondary"
+        >
+          <ArrowBackIcon />
+        </Button>
+        &nbsp;
+        <Button
+          onClick={handleSubmit}
+          variant="outlined"
+          color="primary"
+        >
+          <CheckCircleOutlineIcon />
+        </Button>
       </div>
 
       <br /><br />

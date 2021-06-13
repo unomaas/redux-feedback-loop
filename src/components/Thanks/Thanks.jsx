@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button } from '@material-ui/core';
+import LoopIcon from '@material-ui/icons/Loop';
 //#endregion ⬆⬆ Document setup above. 
 
 
@@ -40,7 +41,7 @@ export default function Thanks() {
           variant="contained"
           color="primary"
         >
-          Click here to leave new feedback
+          <LoopIcon /> &nbsp; Start Over
       </Button>
       </div>
 

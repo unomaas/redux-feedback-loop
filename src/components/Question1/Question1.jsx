@@ -6,6 +6,8 @@ import { useDispatch } from 'react-redux';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button, MenuItem, TextField } from '@material-ui/core';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 //#endregion ⬆⬆ Document setup above. 
 
 
@@ -44,7 +46,7 @@ export default function Question1() {
       <div className="question-form">
         <form onSubmit={handleSubmit}>
           <Button disabled>
-            Back
+            <ArrowBackIcon />
           </Button>
           <TextField
             required
@@ -60,7 +62,7 @@ export default function Question1() {
             <MenuItem value='5'>5</MenuItem>
           </TextField>
           <Button type="submit">
-            Next
+            <ArrowForwardIcon />
           </Button>
         </form>
       </div>
