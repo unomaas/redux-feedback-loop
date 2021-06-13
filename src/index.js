@@ -22,20 +22,7 @@ import logger from 'redux-logger';
 
 
 //#region ⬇⬇ All reducers below: 
-// const feedbackArray = (state = [], action) => {
-//   switch (action.type) {
-//     case 'ADD_FEEDBACK':
-//       return [...state, action.payload];
-//     // case 'ADD_FEELING':
-//     //   return [...state, action.payload];
-//     case 'EMPTY_FEEDBACK':
-//       return [];
-//     default:
-//       return state;
-//   } // End switch
-// } // End feedbackReducer reducer
-//#endregion ⬆⬆ All reducers above. 
-
+// ⬇ feelingObject reducer:
 const feelingObject = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_FEELING':
@@ -47,6 +34,7 @@ const feelingObject = (state = {}, action) => {
   } // End switch
 } // End feelingObject reducer
 
+// ⬇ understandingObject reducer:
 const understandingObject = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_UNDERSTANDING':
@@ -58,6 +46,7 @@ const understandingObject = (state = {}, action) => {
   } // End switch
 } // End understandingObject reducer
 
+// ⬇ supportedObject reducer:
 const supportedObject = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_SUPPORTED':
@@ -69,6 +58,7 @@ const supportedObject = (state = {}, action) => {
   } // End switch
 } // End supportedObject reducer
 
+// ⬇ commentObject reducer:
 const commentObject = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_COMMENT':
@@ -79,6 +69,8 @@ const commentObject = (state = {}, action) => {
       return state;
   } // End switch
 } // End commentObject reducer
+//#endregion ⬆⬆ All reducers above. 
+
 
 //#region ⬇⬇ Store & render below: 
 // ⬇ Store: 
