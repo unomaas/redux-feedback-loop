@@ -49,6 +49,8 @@ export default function Question3() {
   return (
     <div className="question-wrapper">
       <h2>How well are you being supported?</h2>
+      <p>1 = Bad, 5 = Great</p>
+
 
       <div className="question-form">
         <form onSubmit={handleSubmit}>

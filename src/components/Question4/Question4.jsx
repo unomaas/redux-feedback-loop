@@ -48,7 +48,9 @@ export default function Question4() {
   // ⬇ Rendering:
   return (
     <div className="question-wrapper">
-      <h2>Any comments you want to leave?</h2>
+      <h2>Any comments you'd like to leave?</h2>
+      <p>It's not required.</p>
+
 
       <div className="question-form">
         <form onSubmit={handleSubmit}>
@@ -56,10 +58,8 @@ export default function Question4() {
             <ArrowBackIcon />
           </Button>
           <TextField
-            required
             defaultValue=""
             onChange={event => setComment(event.target.value)}
-            helperText="Required"
           >
           </TextField>
           <Button type="submit">
