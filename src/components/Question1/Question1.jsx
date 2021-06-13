@@ -2,7 +2,7 @@
 // ⬇ File setup: 
 import './Question1.css';
 // ⬇ Dependent functionality:
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button, MenuItem, TextField } from '@material-ui/core';
@@ -13,16 +13,24 @@ export default function Question1() {
   //#region ⬇⬇ State variables below:
   const dispatch = useDispatch();
   const history = useHistory();
-  const [feedback, setFeedback] = useState('');
+  const [feeling, setFeeling] = useState('');
+  const feedback = {
+    feeling: feeling
+  }
   //#endregion ⬆⬆ State variables above. 
+  const feedbackArray = useSelector(store => store.feedbackArray);
+
 
 
   //#region ⬇⬇ Event handlers below:
   /** ⬇ handleSubmit:
-  * When clicked, this will send the feedback to the feedbackArray reducer and send the user to the next page. 
-  */
+    * When clicked, this will send the feedback to the feedbackArray reducer and send the user to the next page. 
+    */
   const handleSubmit = () => {
-    console.log('In Question1 handleSubmit, feeling:', feedback);
+    console.log('In Question1 handleSubmit, feeling:', feeling);
+    // ⬇ Bundling feedback into an object key:
+    const feedback = {feeling: feeling}
+    console.log(feedback);
     // ⬇ Sending user input to the reducer:
     dispatch({
       type: 'ADD_FEEDBACK',
@@ -45,7 +53,7 @@ export default function Question1() {
             required
             select
             defaultValue=""
-            onChange={event => setFeedback(event.target.value)}
+            onChange={event => setFeeling(event.target.value)}
             helperText="Required"
           >
             <MenuItem value='1'>1</MenuItem>
