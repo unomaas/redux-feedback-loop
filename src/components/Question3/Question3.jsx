@@ -33,6 +33,13 @@ export default function Question3() {
     // ⬇ Sending user to next page: 
     history.push('/question4');
   } // End handleSubmit
+
+  /** ⬇ handleBack:
+    * When clicked, this will send the user to the previous page to change an answer. 
+    */
+  const handleBack = () => {
+    history.push('/question2');
+  } // End handleBack
   //#endregion ⬆⬆ Event handles above. 
 
 
@@ -43,6 +50,9 @@ export default function Question3() {
 
       <div className="question-form">
         <form onSubmit={handleSubmit}>
+          <Button onClick={handleBack}>
+            Back
+          </Button>
           <TextField
             required
             select
