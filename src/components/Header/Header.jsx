@@ -8,8 +8,16 @@ export default function Header() {
   return (
     <div>
       <header className='header'>
-        <h1 className='header-title'>Feedback!</h1>
-        <h4 className='header-subtitle'>Don't forget it!</h4>
+        <div className="logo">
+          <img src="./images/logo1.png" height="65"></img>
+        </div>
+        <div className="header-main">
+          <span>
+            <p className='header-title'>Feedback App</p>
+            <p className="header-subtitle"> v1.0</p>
+          </span>
+        </div>
+
       </header>
     </div>
   ) // End return
