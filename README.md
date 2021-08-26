@@ -1,12 +1,12 @@
-## T2W11HW - Ryan's React Feedback Review App
+# React Feedback Review App
 
 Thanks for looking into my weekend project, the React feedback review web app! 
 
 
 
-# Description
+## Description
 
-Duration: 3 Day Sprint
+Duration: Weekend Sprint
 
 This is a web based application that uses React to interact with a virtual server and database.  The objective was to get hands-on experience working with React to build a full-stack app using CRUD methodology and Router capability.  
 
@@ -18,9 +18,9 @@ At the end of the feedback process, the app will review their choices displayed 
 
 ## Prerequisites
 
-Node.js: https://nodejs.org/en/
+- Node.js: https://nodejs.org/en/
 
-PostgreSQL: https://www.postgresql.org/
+- PostgreSQL: https://www.postgresql.org/
 
 
 
@@ -28,23 +28,23 @@ PostgreSQL: https://www.postgresql.org/
 
 To run this program, you will need to:
 
-[] Build the database in your SQL server with the code in "database.sql" file. 
+- [] Build the database in your SQL server with the code in "database.sql" file. 
 
-[] Run 'npm install' in your terminal to install the dependencies.
+- [] Run 'npm install' in your terminal to install the dependencies.
 
-[] Run 'npm run server' in one terminal, and 'npm run client' in another terminal.
+- [] Run 'npm run server' in one terminal, and 'npm run client' in another terminal.
 
 
 
 ## Usage
 
-#1. To use this app, start the server and client in your terminal.  React will navigate to http://localhost:3000/ in your browser.  
+- #1. To use this app, start the server and client in your terminal.  React will navigate to http://localhost:3000/ in your browser.  
 
-#2. The app will ask the user a series of question of how they're feeling in relation to the content.  The user will navigate to the next page with the buttons displayed. 
+- #2. The app will ask the user a series of question of how they're feeling in relation to the content.  The user will navigate to the next page with the buttons displayed. 
 
-#3. After all questions are answered, the user can review their answers before submitting them to the database.
+- #3. After all questions are answered, the user can review their answers before submitting them to the database.
 
-#4. After submission, the user may choose to leave new feedback, if desired.  
+- #4. After submission, the user may choose to leave new feedback, if desired.  
 
 
 
