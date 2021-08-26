@@ -4,7 +4,7 @@ Thanks for looking into my weekend project, the React feedback review web app!
 
 
 
-## Description
+## Description:
 
 Duration: Weekend Sprint
 
@@ -16,7 +16,7 @@ At the end of the feedback process, the app will review their choices displayed 
 
 
 
-## Prerequisites
+## Prerequisites:
 
 - Node.js: https://nodejs.org/en/
 
@@ -24,7 +24,7 @@ At the end of the feedback process, the app will review their choices displayed 
 
 
 
-## Installation
+## Installation:
 
 To run this program, you will need to:
 
@@ -36,7 +36,7 @@ To run this program, you will need to:
 
 
 
-## Usage
+## Usage:
 
 - #1. To use this app, start the server and client in your terminal.  React will navigate to http://localhost:3000/ in your browser.  
 
@@ -55,18 +55,18 @@ I strive to make my apps accessible to all!
 This specific app is dyslexia-friendly, with a custom font, "OpenDyslexia", added to the server. 
 
 
-### Built With
+### Built With:
 
 JavaScript/HTML/CSS, jQuery, React, Redux, Node, Material-ui, Axios, PG. 
 
 
 
-### Acknowledgement
+### Acknowledgement:
 
 I'd like to give thanks to Dane Smith, and everyone in Prime Academy's Genocchi cohort for helping me get through this week at Prime Digital Academy!  I wouldn't be here today without them.  
  
 
 
-### Support
+### Support:
 
 If you have suggestions, comments, or issues, please contact me at rdmjobs@live.com.  Thanks for reviewing my project!  Stay wonderful. <3
